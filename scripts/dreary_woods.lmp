@@ -1,0 +1,73 @@
+{
+	"id": "DrearyWoods",
+	"min": 15,
+	"nodes": [
+		{
+			"id": "Forest0",
+			"x": -16,
+			"y": -80
+		},
+		{
+			"id": "Forest1",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"id": "Forest2",
+			"x": 90,
+			"y": -16
+		},
+		{
+			"id": "Forest3",
+			"x": 178,
+			"y": 2
+		},
+		{
+			"id": "Forest4",
+			"x": -4,
+			"y": 90
+		},
+		{
+			"id": "Forest5",
+			"x": -70,
+			"y": 160
+		},
+		{
+			"id": "Forest6",
+			"x": 76,
+			"y": 148
+		}
+	],
+	"edges": [
+		{
+			"loc1": "Forest0",
+			"loc2": "Forest1",
+			"dir": 0
+		},
+		{
+			"loc1": "Forest1",
+			"loc2": "Forest2",
+			"dir": 1
+		},
+		{
+			"loc1": "Forest2",
+			"loc2": "Forest3",
+			"dir": 1
+		},
+		{
+			"loc1": "Forest1",
+			"loc2": "Forest4",
+			"dir": 0
+		},
+		{
+			"loc1": "Forest5",
+			"loc2": "Forest4",
+			"dir": 1
+		},
+		{
+			"loc1": "Forest4",
+			"loc2": "Forest6",
+			"dir": 1
+		}
+	]
+}

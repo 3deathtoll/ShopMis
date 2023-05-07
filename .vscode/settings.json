@@ -1,0 +1,11 @@
+{
+    "[json]": {
+        "editor.wordWrap": "on",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": false
+    },
+    "files.associations": {
+        "*.lmn": "json",
+        "*.lmp": "json"
+    }
+}

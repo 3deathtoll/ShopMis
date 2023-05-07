@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://gui/main/grid_button.gd" id="1_qjsns"]
+
+[sub_resource type="SystemFont" id="SystemFont_dldll"]
+font_names = PackedStringArray("Monospace")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3y3ws"]
+font = SubResource("SystemFont_dldll")
+font_size = 12
+font_color = Color(0.670588, 0.670588, 0.670588, 1)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(120, 36)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_qjsns")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -12.0
+offset_bottom = 26.0
+grow_horizontal = 0
+label_settings = SubResource("LabelSettings_3y3ws")

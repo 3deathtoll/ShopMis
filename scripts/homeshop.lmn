@@ -1,0 +1,80 @@
+{
+	"domain": "maplewick",
+	"passages": [
+		{
+			"id": "HomeShop",
+			"is_location": true,
+			"text": "You are in your shop",
+			"image": "homeshop.jpg",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Open Shop",
+					"do": "{if showcased_items.size() > 0; goto(\"OpenShop\"); else; goto(\"ShowcaseEmpty\"); endif}"
+				},
+				{
+					"key": 1,
+					"text": "Showcase",
+					"goto": "Showcase"
+				},
+				{
+					"key": 2,
+					"text": "Supply",
+					"goto": "Supply"
+				},
+				{
+					"key": 3,
+					"text": "Rest",
+					"min": 60,
+					"do": "{recover()}"
+				}
+			]
+		},
+		{
+			"id": "OpenShop",
+			"text": "How long will you open the shop for?",
+			"actions": [
+				{
+					"key": 0,
+					"text": "1 hr",
+					"do": "{open_shop(1)}",
+					"goto": "End"
+				},
+				{
+					"key": 1,
+					"text": "2 hrs",
+					"do": "{open_shop(2)}",
+					"goto": "End"
+				},
+				{
+					"key": 2,
+					"text": "4 hrs",
+					"do": "{open_shop(4)}",
+					"goto": "End"
+				},
+				{
+					"key": 3,
+					"text": "8 hrs",
+					"do": "{open_shop(8)}",
+					"goto": "End"
+				},
+				{
+					"key": 14,
+					"text": "Back",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "ShowcaseEmpty",
+			"text": "Your showcase is empty. Put items in the showcase before opening shop.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		}
+	]
+}

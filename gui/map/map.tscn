@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://gxbuirugathp"]
+
+[ext_resource type="Script" path="res://gui/map/map.gd" id="1_x4sw1"]
+[ext_resource type="Script" path="res://gui/map/map_origin.gd" id="2_5jij1"]
+[ext_resource type="PackedScene" uid="uid://ba1wjq0w6w8yp" path="res://gui/map/map_node.tscn" id="2_wekwe"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4sw1")
+
+[node name="Origin" type="Node2D" parent="."]
+script = ExtResource("2_5jij1")
+
+[node name="Current" parent="." instance=ExtResource("2_wekwe")]
+layout_mode = 0

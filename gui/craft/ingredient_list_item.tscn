@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbxfwat4e5ji0"]
+
+[ext_resource type="Script" path="res://gui/craft/ingredient_list_item.gd" id="1_rgbfn"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 395.0
+offset_bottom = 44.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+script = ExtResource("1_rgbfn")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+toggle_mode = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ingredient name         "
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "10/3"

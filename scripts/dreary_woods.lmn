@@ -1,0 +1,84 @@
+{
+	"domain": "dreary_woods",
+	"passages": [
+		{
+			"id": "Forest0",
+			"is_location": true,
+			"text": "As you approach the outskirts of Dreary Woods, you are immediately struck by the mist that shrouds the forest. The air is thick with a dense, swirling mist that seems to be coming from the heart of the forest.\n\nAs the sunlight pierces through the thick mist that envelops the forest, it creates a mesmerizing spectacle. The light rays seem to dance and twirl, casting an ethereal glow over everything they touch."
+		},
+		{
+			"id": "Forest1",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "Forest2",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "Forest3",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "Forest4",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "Forest5",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "Forest6",
+			"is_location": true,
+			"on_ready": "{check_encounter()}",
+			"text": "You are in the outskirts of Dreary Woods. The trees are tall and straight, with leaves that rustle softly in the gentle breeze. The underbrush is sparse, with patches of green grass and wildflowers that seem to glow with a soft, golden light."
+		},
+		{
+			"id": "TrollVictory",
+			"text": "The Troll is lying there defeated. \"Booty, please.\", he makes a begging face. He must really want it. You are also in need of a release.\n\nWill you listen to his plea?",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Vagina",
+					"goto": "TrollVictoryVagina"
+				},
+				{
+					"key": 14,
+					"text": "No",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "TrollVictoryVagina",
+			"text": "You decide to give in to his pleas. You go beside him and stroke his thick penis. The penis has several smooth rocky bumps on it. You can't help but imagine what it will feel inside of you.\n\nClear precum is flowing down from the mouth of the penis. You gulp. You slowly bring your pussy close to his penis. He can't take it anymore. You are on top of the Troll facing him when he suddenly spings up and embrace you. His penis goes inside you in one go.\n\n\"Ahhh!\" You moan.\n\nHe begins pulling and pushing his hips as he grabs your ass cheeks with his hands. His bumpy member is repeatedly churning your insides. Being on top but not being in control. You enjoy this position as you let the Troll plow you thoroughly. You near your climax as the Troll starts speeding up. Just when you thought it couldn't get any better, his rocky member starts vibrating.\n\n\"Booty! Great!\"\n\nYou orgasm as the Troll empties his load into you. You pant as you lay there exhausted. Before you notice, the Troll has already started rolling away.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "TrollDefeatAss",
+			"text": "You are no match for the Troll's stubborn strength. You lay there defenseless and at the Troll's mercy.\n\nHe has a really wide grin plastered on his face. He goes around you and tightly hugs your naked ass. He rubs his face on you and sniffs at your groins. He then spreads your buns apart with his thick fingers. You feel something even thicker touch your backdoor. Before you can react the thick member penetrates you in one go.\n\n\"Ahhh\" You moan half from the pain and a bigger half from the pleasure. It's thicker than you imagined. The smooth bumps on the penis, although rocky, doesn't hurt you at all. In fact they are making you feel more sensitive as they rub here and there inside you.\n\nThe Troll starts making to and fro movements with his hips while he's hugging you tightly from behind. You can't help but want to reciprocate the rhythmic movements. As you are reaching your climax, you feel the Troll speed up too. You can feel his rocky dick vibrating inside you.\n\nHe is also about to cum.\n\n\"Let's do it together!\" you scream as you slowly edge closer. \"Booty! Great!\" The Troll affirms. He then pours his seed into your asshole as you orgasm. He makes a deeply satisfied face and then rolls away, leaving you with a lot of cleaning up to do.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		}
+	]
+}

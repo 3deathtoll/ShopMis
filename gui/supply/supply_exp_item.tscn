@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://gui/supply/supply_exp_item.gd" id="1_ggrrk"]
+[ext_resource type="LabelSettings" uid="uid://bkyixyciqmq2n" path="res://gui/res/item_label_settings.tres" id="2_mr304"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 400.0
+offset_bottom = 41.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+script = ExtResource("1_ggrrk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LabelName" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Item Name"
+label_settings = ExtResource("2_mr304")
+
+[node name="LabelLevel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "Lv100"
+label_settings = ExtResource("2_mr304")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LabelCost" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "10000c"
+label_settings = ExtResource("2_mr304")
+
+[node name="LabelQty" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "x9999"
+label_settings = ExtResource("2_mr304")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="ButtonAll" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_vertical = 4
+text = "++"
+
+[node name="ButtonSome" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_vertical = 4
+text = "+"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+placeholder_text = "1"
+alignment = 2
+max_length = 4
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+select_all_on_focus = true
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer3/ButtonAll" to="." method="_on_button_all_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer3/ButtonSome" to="." method="_on_button_some_button_down"]
+[connection signal="focus_exited" from="MarginContainer/VBoxContainer/HBoxContainer3/LineEdit" to="." method="_on_line_edit_focus_exited"]
+[connection signal="text_submitted" from="MarginContainer/VBoxContainer/HBoxContainer3/LineEdit" to="." method="_on_line_edit_text_submitted"]

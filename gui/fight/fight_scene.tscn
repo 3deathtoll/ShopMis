@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://gui/fight/fight_scene.gd" id="1_6nj84"]
+[ext_resource type="PackedScene" path="res://gui/fight/fight_dialogue_left.tscn" id="2_j3xxa"]
+[ext_resource type="PackedScene" path="res://gui/fight/fight_dialogue_right.tscn" id="3_mnadj"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6nj84")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="HBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBox" parent="HBox/ScrollContainer/VBox" instance=ExtResource("2_j3xxa")]
+layout_mode = 2
+
+[node name="HBox2" parent="HBox/ScrollContainer/VBox" instance=ExtResource("3_mnadj")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3

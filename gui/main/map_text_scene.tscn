@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bujuq0fotvv32"]
+
+[ext_resource type="Script" path="res://gui/main/map_text_scene.gd" id="1_ipfld"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ipfld")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBox/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="HBox/VBox/MarginContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBox/VBox/MarginContainer2"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBox/VBox/MarginContainer"]
+layout_mode = 2
+color = Color(0.282353, 0.282353, 0.282353, 1)
+
+[node name="Control" type="CenterContainer" parent="HBox/VBox/MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="Main" parent="HBox/VBox/MarginContainer/Control" instance_placeholder="res://gui/map/map.tscn"]
+layout_mode = 2

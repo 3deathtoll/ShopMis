@@ -1,0 +1,259 @@
+[gd_scene load_steps=13 format=3 uid="uid://bg5hblyj4ea2o"]
+
+[ext_resource type="Script" path="res://gui/main/main.gd" id="1_h3pyf"]
+[ext_resource type="PackedScene" path="res://gui/inv/inv_scene.tscn" id="2_2kma8"]
+[ext_resource type="PackedScene" path="res://gui/main/log_list.tscn" id="2_f0jrd"]
+[ext_resource type="PackedScene" uid="uid://bujuq0fotvv32" path="res://gui/main/map_text_scene.tscn" id="2_sa35q"]
+[ext_resource type="PackedScene" uid="uid://ct7nupw3i4ska" path="res://gui/craft/craft_scene.tscn" id="3_m7ftd"]
+[ext_resource type="PackedScene" path="res://gui/craft/craft_manual_scene.tscn" id="4_gsrth"]
+[ext_resource type="PackedScene" path="res://gui/supply/supply_scene.tscn" id="5_tsldi"]
+[ext_resource type="PackedScene" path="res://gui/supply/showcase_scene.tscn" id="6_dvrxs"]
+[ext_resource type="PackedScene" path="res://gui/main/grid_button.tscn" id="6_vgqfq"]
+[ext_resource type="PackedScene" uid="uid://df8a2kyrs18w" path="res://gui/save/save_scene.tscn" id="7_tm1eu"]
+[ext_resource type="PackedScene" path="res://gui/fight/fight_scene.tscn" id="9_0qemq"]
+[ext_resource type="PackedScene" uid="uid://cpgxnj76g16pv" path="res://gui/dialogs/text_input_dialog.tscn" id="12_od8yg"]
+
+[node name="Main" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h3pyf")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="HBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBox/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="HBox/LeftPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="LabelPlayer" type="Label" parent="HBox/LeftPanel/MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 6
+autowrap_mode = 3
+
+[node name="LabelItem" type="Label" parent="HBox/LeftPanel/MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 6
+autowrap_mode = 3
+
+[node name="LabelClock" type="Label" parent="HBox/LeftPanel/MarginContainer/VBox"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBox/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="HBox/LeftPanel/MarginContainer2"]
+layout_mode = 2
+
+[node name="LogList" parent="HBox/LeftPanel/MarginContainer2" instance=ExtResource("2_f0jrd")]
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBox/LeftPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="HBox/LeftPanel/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 8
+columns = 3
+
+[node name="Wait" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "Wait"
+
+[node name="Inv" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Inv"
+
+[node name="Info" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "Info"
+
+[node name="Craft" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Craft"
+
+[node name="Data" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Data"
+
+[node name="Settings" type="Button" parent="HBox/LeftPanel/MarginContainer3/GridContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "Settings"
+
+[node name="CenterPanel" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Margin" type="MarginContainer" parent="HBox/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="HBox/CenterPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MapText" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("2_sa35q")]
+visible = false
+layout_mode = 2
+
+[node name="Inv" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("2_2kma8")]
+visible = false
+layout_mode = 2
+
+[node name="Craft" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("3_m7ftd")]
+visible = false
+layout_mode = 2
+
+[node name="CraftManual" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("4_gsrth")]
+visible = false
+layout_mode = 2
+
+[node name="Supply" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("5_tsldi")]
+visible = false
+layout_mode = 2
+
+[node name="Showcase" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("6_dvrxs")]
+visible = false
+layout_mode = 2
+
+[node name="Save" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("7_tm1eu")]
+visible = false
+layout_mode = 2
+
+[node name="Fight" parent="HBox/CenterPanel/Margin/HBox" instance=ExtResource("9_0qemq")]
+layout_mode = 2
+
+[node name="Margin2" type="MarginContainer" parent="HBox/CenterPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 10
+
+[node name="GridButtons" type="GridContainer" parent="HBox/CenterPanel/Margin2"]
+layout_mode = 2
+columns = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Button1" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "1"
+
+[node name="Button2" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "2"
+
+[node name="Button3" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "3"
+
+[node name="Button4" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "4"
+
+[node name="Button5" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "5"
+
+[node name="ButtonQ" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "Q"
+
+[node name="ButtonW" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "W"
+
+[node name="ButtonE" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "E"
+
+[node name="ButtonR" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "R"
+
+[node name="ButtonT" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "T"
+
+[node name="ButtonA" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "A"
+
+[node name="ButtonS" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "S"
+
+[node name="ButtonD" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "D"
+
+[node name="ButtonF" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "F"
+
+[node name="ButtonG" parent="HBox/CenterPanel/Margin2/GridButtons" instance=ExtResource("6_vgqfq")]
+layout_mode = 2
+key_text = "G"
+
+[node name="TextInputDialog" parent="." instance=ExtResource("12_od8yg")]
+layout_mode = 1
+
+[connection signal="button_up" from="HBox/LeftPanel/MarginContainer3/GridContainer/Inv" to="." method="_on_inv_button_up"]
+[connection signal="button_up" from="HBox/LeftPanel/MarginContainer3/GridContainer/Craft" to="." method="_on_craft_button_up"]
+[connection signal="button_up" from="HBox/LeftPanel/MarginContainer3/GridContainer/Data" to="." method="_on_data_button_up"]

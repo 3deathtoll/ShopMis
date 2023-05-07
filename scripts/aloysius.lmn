@@ -1,0 +1,108 @@
+{
+	"domain": "aloysius",
+	"passages": [
+		{
+			"id": "AlchemyLab",
+			"is_location": true,
+			"on_ready": "{if not has_met; goto(\"AloysiusIntro\"); endif}",
+			"text": "You are in Aloysius' alchemy lab. The walls of the lab are lined with shelves filled with glass bottles, jars, and vials, each containing a different substance, from powders and liquids to dried herbs and animal parts. The labels on the containers are written in an elegant, flowing script, indicating the name of the substance and its properties.\n\nIn the center of the room is a large, sturdy wooden workbench, its surface polished to a high shine. The bench is covered in various alchemical tools, each positioned with precision and care.\n\nAt one end of the lab, you see a fireplace, with a cauldron hanging over the flames.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Aloysius",
+					"goto": "AloysiusInteract"
+				}
+			]
+		},
+		{
+			"id": "AloysiusIntro",
+			"text": "{has_met = true} As you enter the lab, the strong aroma of herbs and chemicals hits your nose. You immediately notice the rows of shelves that line the walls, each one filled with glass bottles, jars, and vials, each containing a different substance, from powders and liquids to dried herbs and animal parts. These substances are carefully labeled and neatly organized by type and function. You are astonished by how well everything is arranged. That's a level of efficiency your lazy ass can never achieve. \n\n\"Good morning. How may I assist you today?\" You hear a hoarse voice.\n\nThe owner of the voice is a middle-aged Lizardman holding a bubbling flask. He has dark green scales and a long tapering tail. He also has a pair of round spectacles perched on the bridge of his snout, giving him an air of seriousness and focus.\n\nYou introduce yourself and explain that you are in the process of meeting your neighbors.\n\n\"Hello, I'm Aloysius, a proficient alchemist. Now and then I help out the villagers with my potion-making skills.\"\n\nYou also mention you are impressed by the cleanliness of the place. Hearing your praise, the corners of Aloysius's mouth slightly curve upwards. \n\n\"It's a good thing you have opened shop here. It'll be easier for me to acquire herbs now. I'll be depending on you a lot.\"",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "AloysiusInteract",
+			"text": "\"Ah, {player.name}\"\n\nAloysius takes his eyes off from his alchemy tome as he hears you come in.\n\n\"What brings you here today?\"",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Talk",
+					"goto": "AloysiusTalk",
+					"stack_push_back": true
+				},
+				{
+					"key": 1,
+					"text": "Learn",
+					"do": "{learn()}",
+					"stack_push_back": true
+				}
+			]
+		},
+		{
+			"id": "AloysiusTalk",
+			"text": "\"Ofcourse I'm free to have a few words with you. Ask away.\"\n\nAloysius closes the tome he was reading and waits for your question.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "MapleWick",
+					"goto": "AloysiusMaplewick",
+					"stack_push_back": true
+				},
+				{
+					"key": 14,
+					"text": "Back",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "AloysiusMaplewick",
+			"text": "You ask why Aloysius has settled in Maplewick.\n\n\"I settled here to better concentrate on my research. I find that the calm environment of the countryside stimulates my creativity as opposed to the bustling towns and cities. Maplewick is not only peaceful but the people here are all so pleasant.\"\n\nCities can be distracting and overwhelming to some people. You nod in understanding.\n\nYou ask if Aloysius misses his city life.\n\n\"No, there is absolutely nothing I miss about the city. I was totally tired of that life when I decided I needed a change of pace.\"\n\nMaybe there is a story to this.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "AloysiusLearnStart",
+			"text": "{start_learn = true; learn_recipe(\"Healing Draught\")}You express how much you are interested in alchemy. \n\n\"If you are interested in alchemy, I could teach you the basics.\"\n\nYou say you don't want to disturb Aloysius's research.\n\n\"It's no bother. Teaching others is but another way to refine your own skills. I can not pride myself as a good alchemist until I can successfully pass down my knowledge to many. Having more people that share my passion is just an added plus.\"\n\nAloysius takes out a paper from his neatly stacked papers and scribbles down some instructions. He then gives it to you and explains all the steps involved.\n\n\"This is the recipe for Healing Draughts. It is among the easier recipes to craft. Gathering ingredients is also an integral part of learning alchemy. So I'll leave that also to you.\"",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "AloysiusLearnWait",
+			"text": "\"Alchemy should be approached in an organized way. Finish the task I gave you before learning more\", Aloysius tells you in a stern voice.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		},
+		{
+			"id": "AloysiusQuest1Completed",
+			"text": "\"I see you have completed the task I gave you. I am a bit busy right now. Why don't you come later to learn more?\" (Next version)",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		}
+	]
+}

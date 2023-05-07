@@ -1,0 +1,114 @@
+{
+	"id": "Maplewick",
+	"nodes": [
+		{
+			"id": "HomeShop",
+			"x": 0,
+			"y": 0
+		},
+		{
+			"id": "AlchemyLab",
+			"x": -64,
+			"y": 0
+		},
+		{
+			"id": "Inn",
+			"x": 0,
+			"y": 128
+		},
+		{
+			"id": "Smithy",
+			"x": 64,
+			"y": 0
+		},
+		{
+			"id": "Guild",
+			"x": 64,
+			"y": 128
+		},
+		{
+			"id": "VillageRoad1",
+			"x": -64,
+			"y": 64
+		},
+		{
+			"id": "VillageRoad2",
+			"x": 0,
+			"y": 64
+		},
+		{
+			"id": "VillageRoad3",
+			"x": 64,
+			"y": 64
+		},
+		{
+			"id": "VillageRoad4",
+			"x": 128,
+			"y": 64
+		},
+		{
+			"id": "VillageRoad5",
+			"x": 128,
+			"y": 128
+		}
+	],
+	"edges": [
+		{
+			"loc1": "HomeShop",
+			"loc2": "VillageRoad2",
+			"dir": 0
+		},
+		{
+			"loc1": "AlchemyLab",
+			"loc2": "VillageRoad1",
+			"dir": 0
+		},
+		{
+			"loc1": "VillageRoad2",
+			"loc2": "Inn",
+			"dir": 0
+		},
+		{
+			"loc1": "Smithy",
+			"loc2": "VillageRoad3",
+			"dir": 0
+		},
+		{
+			"loc1": "VillageRoad3",
+			"loc2": "Guild",
+			"dir": 0
+		},
+		{
+			"loc1": "Guild",
+			"loc2": "VillageRoad5",
+			"dir": 1
+		},
+		{
+			"loc1": "VillageRoad1",
+			"loc2": "VillageRoad2",
+			"dir": 1
+		},
+		{
+			"loc1": "VillageRoad2",
+			"loc2": "VillageRoad3",
+			"dir": 1
+		},
+		{
+			"loc1": "VillageRoad3",
+			"loc2": "VillageRoad4",
+			"dir": 1
+		},
+		{
+			"loc1": "VillageRoad4",
+			"loc2": "VillageRoad5",
+			"dir": 0
+		}
+	],
+	"global_edges": [
+		{
+			"loc1": "VillageRoad5",
+			"loc2": "Forest0",
+			"dir": 0
+		}
+	]
+}

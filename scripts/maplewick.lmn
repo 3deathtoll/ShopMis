@@ -1,0 +1,37 @@
+{
+	"domain": "maplewick",
+	"passages": [
+		{
+			"id": "VillageRoad1",
+			"is_location": true,
+			"text": "To your north you see an old looking building. Its door and windows are adorned with intricate runes. As you approach it, the smell of herbs and medicine hits your nose."
+		},
+		{
+			"id": "VillageRoad2",
+			"is_location": true,
+			"text": "To the north you see your shop.\n\nJessi's Inn is to your south. Having noticed you, she is energetically waving her hands to get your attention.\n\nIn the center of the road is a well made of stone. Looking down the well you see crystal clear water.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Well",
+					"do": "{draw_water()}"
+				}
+			]
+		},
+		{
+			"id": "VillageRoad3",
+			"is_location": true,
+			"text": "To your north stands a sturdy building with a large chimney protruding from its roof. The sound of hammering and clanging metal can be heard from beyond its large metal door.\n\nYou see a grand and imposing building to your south. The place is bustling with activity. People of all shapes and sizes, each with their own distinctive gear and equipment, can be seen entering and leaving the building. The large banner in front reads \"Adventure Guild\""
+		},
+		{
+			"id": "VillageRoad4",
+			"is_location": true,
+			"text": "West of you lies the rest of the village.\n\nYou notice several adventurers heading south."
+		},
+		{
+			"id": "VillageRoad5",
+			"is_location": true,
+			"text": "To your south there is a marked trail leading into a forest, lined with tall trees and thick undergrowth. You have reached the entrance to the Dreary Woods.\n\nWest of you lies the side entrance of the Adventurers' Guild."
+		}
+	]
+}

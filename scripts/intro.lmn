@@ -1,0 +1,157 @@
+{
+	"domain": "intro",
+	"passages": [
+		{
+			"id": "IntroName",
+			"text": "Ding\n\nAs you hear the bell and turn around towards the doors of your shop, you are greeted by the warm smile of a young woman with curly auburn hair.\n\n\"Welcome to Maplewick village!\" She exclaims, extending her hand for a shake. \"I'm Jessi, the village innkeeper. You must be our new shopkeep. What's your name?\"\n\nYou had just arrived at the village and stepped into your new shop. You shake her hand and introduce yourself. You are {player.name}.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "IntroPlayer"
+				},
+				{
+					"key": 1,
+					"text": "Change name",
+					"do": "{text_input(\"What's your name?\", NAME(player.name))}"
+				}
+			]
+		},
+		{
+			"id": "IntroPlayer",
+			"text": "\"That's a wonderful name.\" Jessi pauses while looking around curiously.\n\n\"By the way I don't see any luggage with you... Don't tell me! Are you a Player?\"\n\nYou helplessly nod. You didn't expect to be found out so soon. Jessi's observational skills are surprisingly good.\n\n\"I knew it! All your stuff must be in your Inventory. Wait till everyone hears about this. A Player opening a shop in the village. I'm sure everyone will be so excited.\"",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "IntroBoob"
+				}
+			]
+		},
+		{
+			"id": "IntroBoob",
+			"text": "\"Since you are going to be settling here we should get to know each other better. What size are your bras?\"\n\nTalk about being subtle. You try to change the topic. Anyway you know that your size is",
+			"actions": [
+				{
+					"key": 0,
+					"text": "A",
+					"goto": "IntroBodyShape",
+					"do": "{body.boob_size = 0}"
+				},
+				{
+					"key": 1,
+					"text": "B",
+					"goto": "IntroBodyShape",
+					"do": "{body.boob_size = 1}"
+				},
+				{
+					"key": 2,
+					"text": "C",
+					"goto": "IntroBodyShape",
+					"do": "{body.boob_size = 2}"
+				},
+				{
+					"key": 3,
+					"text": "D",
+					"goto": "IntroBodyShape",
+					"do": "{body.boob_size = 3}"
+				}
+			]
+		},
+		{
+			"id": "IntroBodyShape",
+			"text": "\"Atleast tell me your hip size.\"\n\nYou wonder if everyone in this village is this open, or if it's just her. You look down to your hips and remember that your body type is still",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Average",
+					"goto": "IntroHair",
+					"do": "{body.body_shape = \"Average\"}"
+				},
+				{
+					"key": 1,
+					"text": "Athletic",
+					"goto": "IntroHair",
+					"do": "{body.body_shape = \"Athletic\"}"
+				},
+				{
+					"key": 2,
+					"text": "Petite",
+					"goto": "IntroHair",
+					"do": "{body.body_shape = \"Petite\"}"
+				},
+				{
+					"key": 3,
+					"text": "Plump",
+					"goto": "IntroHair",
+					"do": "{body.body_shape = \"Plump\"}"
+				}
+			]
+		},
+		{
+			"id": "IntroHair",
+			"text": "\"You are no fun. You aren't telling me anything.\" Jessi pouts.\n\nYou try to pacify her. In your panic you end up telling her obvious information like your hair color which is",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Black",
+					"goto": "IntroMutablity",
+					"do": "{body.hair_color = \"Black\"}"
+				},
+				{
+					"key": 1,
+					"text": "Blonde",
+					"goto": "IntroMutablity",
+					"do": "{body.hair_color = \"Blonde\"}"
+				},
+				{
+					"key": 2,
+					"text": "Red",
+					"goto": "IntroMutablity",
+					"do": "{body.hair_color = \"Red\"}"
+				},
+				{
+					"key": 3,
+					"text": "Brown",
+					"goto": "IntroMutablity",
+					"do": "{body.hair_color = \"Brown\"}"
+				}
+			]
+		},
+		{
+			"id": "IntroMutablity",
+			"text": "Seeing you panic she chuckles. \n\n\"Haha! It's okay. I am just messing with you. Hope I didn't make you uncomfortable.\"\n\nDespite the initial awkwardness, the both of you continued to chat and get to know each other. You find that she is actually quite funny and has a sharp sense of humor. You share many laughs together.\n\n\"I hear Player have high mutability. What about you?\"\n\nMutability is the degree by which Players adapt to their *ahem* companions. Some players don't change at all. While some gain new properies from every contact. You explain that your mutability is (Recommanded: Low)",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Nil",
+					"goto": "IntroEnd",
+					"do": "{body.mutablity = 0}"
+				},
+				{
+					"key": 1,
+					"text": "Low",
+					"goto": "IntroEnd",
+					"do": "{body.mutablity = 30}"
+				},
+				{
+					"key": 2,
+					"text": "High",
+					"goto": "IntroEnd",
+					"do": "{body.mutablity = 100}"
+				}
+			]
+		},
+		{
+			"id": "IntroEnd",
+			"text": "\"Well, it's great to have a new shopkeeper in town. We've been in need of one for a while now. I'm sure the villagers will be happy to have a place to buy essentials again. What kind of shop you planning to open?\" She continues.\n        \nYou tell her that you're planning to open a general store that especially focuses on the needs of adventurers, from weapons and armor to potions and magical trinkets.\n\nJessi's face lights up with excitement. \"That's fantastic! Your store will be a real lifesaver for the villagers. And I'm sure the guests who stay at my inn will appreciate having a convenient place to grab supplies as well.\"\n\nYou can already tell that this is going to be a great opportunity for you. The friendly and welcoming atmosphere of the village makes you feel at home, and you're excited to get your store up and running. You thank Jessi for her warm welcome and she promises to spread the word about your new store. You're looking forward to serving the community and being an integral part of the village.",
+			"actions": [
+				{
+					"key": 0,
+					"text": "Next",
+					"goto": "End"
+				}
+			]
+		}
+	]
+}
